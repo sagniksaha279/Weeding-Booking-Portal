@@ -1,7 +1,7 @@
 import { Link} from "@tanstack/react-router";
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
-
+const backend_url = import.meta.env.VITE_BACKEND_URL;
 /* ───────────────────────────────────────────── */
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Jost:wght@300;400;500&display=swap');
@@ -205,7 +205,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     await axios.post(
-      "http://localhost:5000/api/auth/logout",
+      `${backend_url}/api/auth/logout`,
       {},
       { withCredentials: true }
     );
