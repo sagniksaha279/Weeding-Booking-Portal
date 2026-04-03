@@ -525,13 +525,6 @@ export default function DashboardLayout({ children }) {
             </div>
           </div>
 
-          {/* Logout — original onClick handler preserved */}
-          <div className="dl-logout-wrap">
-            <button onClick={handleLogout} className="dl-logout-btn">
-              {LOGOUT_ICON}
-              Logout
-            </button>
-          </div>
 
           {/* Sidebar stamp */}
           <div className="dl-sidebar-stamp">
