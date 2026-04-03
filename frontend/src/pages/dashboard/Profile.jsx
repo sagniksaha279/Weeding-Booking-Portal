@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import DashboardLayout from "../../components/DashboardLayout";
+import { motion } from "framer-motion";
 
 /* ─── Injected Styles ─── */
 const backend_url = import.meta.env.VITE_BACKEND_URL;

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import DashboardLayout from '../../components/DashboardLayout';
+import { motion } from "framer-motion";
 
 /* ─────────────────────────────────────────────────────────────
    STYLES (unchanged – keep your exact STYLES string)

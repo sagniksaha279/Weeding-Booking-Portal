@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from '@tanstack/react-router';
 import DashboardLayout from '../../components/DashboardLayout';
+import { motion } from "framer-motion";
 
 /* ─────────────────────────────────────────────────────────────
    STYLES

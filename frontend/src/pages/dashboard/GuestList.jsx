@@ -4,7 +4,7 @@ import { useNavigate } from '@tanstack/react-router';
 import DashboardLayout from '../../components/DashboardLayout';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-
+import { motion } from "framer-motion";
 
 const backend_url = import.meta.env.VITE_BACKEND_URL;
 

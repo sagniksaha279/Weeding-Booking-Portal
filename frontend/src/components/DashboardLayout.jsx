@@ -1,6 +1,7 @@
 import { Link, useLocation } from '@tanstack/react-router';
 import axios from 'axios';
 import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 /* ─────────────────────────────────────────────────────────────
    STYLES
