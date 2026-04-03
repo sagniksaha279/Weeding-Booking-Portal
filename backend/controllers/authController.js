@@ -10,8 +10,9 @@ const generateToken = (id) => {
 const setCookie = (res, token) => {
   res.cookie('jwt', token, {
     httpOnly: true,
-    secure: true,    
-    sameSite: 'none',   
+    secure: true,
+    sameSite: 'none',
+    path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 };
@@ -78,7 +79,12 @@ const loginUser = async (req, res) => {
 };
 
 const logoutUser = (req, res) => {
-  res.cookie('jwt', '', { httpOnly: true, expires: new Date(0) });
+  res.clearCookie('jwt', {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none',
+    path: '/',
+  });
   res.status(200).json({ message: 'Logged out successfully' });
 };
 
