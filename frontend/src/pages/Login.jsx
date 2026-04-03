@@ -24,15 +24,17 @@ export default function Login() {
   }, []);
 
   const onSubmit = async (data) => {
-    try {
-      setServerError('');
-      const response = await login(data);
-      localStorage.setItem('user', JSON.stringify(response.data));
-      navigate({ to: '/dashboard' });
-    } catch (error) {
-      setServerError(error.response?.data?.error || 'Invalid credentials');
-    }
-  };
+  try {
+    setServerError('');
+
+    const response = await login(data);
+    localStorage.setItem('user', JSON.stringify(response.data));
+    window.location.href = "/dashboard";
+
+  } catch (error) {
+    setServerError(error.response?.data?.error || 'Invalid credentials');
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12 relative overflow-hidden"
