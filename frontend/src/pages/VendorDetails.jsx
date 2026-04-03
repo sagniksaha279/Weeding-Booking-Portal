@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import { useParams, Link } from '@tanstack/react-router';
-
+import { motion } from "framer-motion";
 /* ─────────────────────────────────────────────────────────────
    STYLES
 ───────────────────────────────────────────────────────────── */

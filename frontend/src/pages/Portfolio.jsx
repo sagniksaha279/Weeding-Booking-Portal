@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
 import { Link } from '@tanstack/react-router';
 
 export default function Portfolio() {

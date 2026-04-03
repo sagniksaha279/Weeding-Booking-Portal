@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 /* ─────────────────────────────────────────────────────────────

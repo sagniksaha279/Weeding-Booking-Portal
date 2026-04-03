@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from '@tanstack/react-router';
 import Swal from "sweetalert2";
 import './booking.css';
-
+import { motion } from "framer-motion";
 // ========== HOOKS ==========
 function useInView(threshold = 0.14) {
   const ref = useRef(null);

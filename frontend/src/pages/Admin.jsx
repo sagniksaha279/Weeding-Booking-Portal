@@ -6,6 +6,7 @@ import "react-calendar/dist/Calendar.css";
 import Swal from 'sweetalert2';
 
 const backend_url = import.meta.env.VITE_BACKEND_URL;
+import { motion } from "framer-motion";
 
 const TABS = ['overview', 'bookings', 'payments', 'reviews', 'menus', 'venues'];
 
