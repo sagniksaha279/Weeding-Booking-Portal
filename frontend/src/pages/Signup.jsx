@@ -31,17 +31,20 @@ export default function Signup() {
   };
 
   const strength = getPasswordStrength(password);
-
   const onSubmit = async (data) => {
-    try {
-      setServerError('');
-      const response = await registerApi({ name: data.name, email: data.email, password: data.password });
-      localStorage.setItem('user', JSON.stringify(response.data));
-      navigate({ to: '/dashboard' });
-    } catch (error) {
-      setServerError(error.response?.data?.error || 'Something went wrong');
-    }
-  };
+  try {
+    setServerError('');
+    const response = await registerApi({
+      name: data.name,
+      email: data.email,
+      password: data.password
+    });
+    localStorage.setItem('user', JSON.stringify(response.data));
+    window.location.href = '/dashboard';
+  } catch (error) {
+    setServerError(error.response?.data?.error || 'Something went wrong');
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12 relative overflow-hidden"
