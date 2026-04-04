@@ -496,10 +496,8 @@ export default function Dashboard() {
                   </svg>
                 </Link>
               </div>
-
-              {/* original empty / filled conditional preserved */}
+              {}
               {inquiries.length === 0 ? (
-                /* ── EMPTY STATE — original link & text preserved, emoji removed ── */
                 <div className="db-empty">
                   <div className="db-empty-img-wrap">
                     <img
@@ -519,19 +517,18 @@ export default function Dashboard() {
                     <span>Browse Vendors</span>
                   </Link>
                 </div>
-              ) : (
-                /* ── INQUIRY LIST — original .map() logic preserved ── */
+                ) : (
                 <div>
                   {inquiries.slice(0, 3).map((inquiry) => (
                     <div key={inquiry.id} className="db-inquiry-row">
                       <div>
                         <div>
-                          {/* original business_name preserved */}
+                          {}
                           <span className="db-inquiry-biz">{inquiry.business_name}</span>
-                          {/* original category badge preserved */}
+                          {}
                           <span className="db-inquiry-cat">{inquiry.category}</span>
                         </div>
-                        {/* original event_date preserved */}
+                        {}
                         <p className="db-inquiry-date">
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ display:'inline', verticalAlign:'middle', marginRight:5 }}>
                             <rect x="3" y="4" width="18" height="18" rx="1"/><path d="M16 2v4M8 2v4M3 10h18"/>
@@ -539,7 +536,7 @@ export default function Dashboard() {
                           Event Date: {new Date(inquiry.event_date).toLocaleDateString()}
                         </p>
                       </div>
-                      {/* original status badge preserved */}
+                      {}
                       <span className={`db-status-badge${inquiry.status === 'Pending' ? ' pending' : ' completed'}`}>
                         {inquiry.status}
                       </span>
